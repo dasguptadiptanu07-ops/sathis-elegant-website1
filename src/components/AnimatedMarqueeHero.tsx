@@ -14,12 +14,12 @@ interface AnimatedMarqueeHeroProps {
   className?: string;
 }
 
-// Reusable Button component styled like in the image
+// Reusable Button component styled with brand orange
 const ActionButton = ({ children }: { children: React.ReactNode }) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="mt-8 px-8 py-3 rounded-full bg-red-500 text-white font-semibold shadow-lg transition-colors hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 cursor-pointer"
+    className="mt-8 px-8 py-3.5 rounded-full bg-[#FF6F3C] text-white font-semibold shadow-lg transition-colors hover:bg-[#E65320] focus:outline-none focus:ring-2 focus:ring-[#FF6F3C]/50 cursor-pointer"
   >
     {children}
   </motion.button>
@@ -51,7 +51,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full min-h-screen overflow-hidden bg-background flex flex-col items-center justify-between py-12 px-4 text-center",
+        "relative w-full min-h-screen overflow-hidden bg-[#F6F1EC] text-[#2A221E] flex flex-col items-center justify-between py-12 px-4 text-center",
         className
       )}
     >
@@ -61,7 +61,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           initial="hidden"
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
-          className="mb-4 inline-block rounded-full border border-border bg-card/60 px-5 py-2 text-sm font-medium text-muted-foreground backdrop-blur-md shadow-sm"
+          className="mb-4 inline-block rounded-full border border-[#FF6F3C]/30 bg-[#FF6F3C]/10 px-5 py-2 text-xs sm:text-sm font-semibold text-[#FF6F3C] backdrop-blur-md shadow-xs"
         >
           {tagline}
         </motion.div>
@@ -78,7 +78,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               },
             },
           }}
-          className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-foreground"
+          className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tight text-[#1D1426]"
         >
           {typeof title === 'string' ? (
             title.split(" ").map((word, i) => (
@@ -101,7 +101,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           animate="show"
           variants={FADE_IN_ANIMATION_VARIANTS}
           transition={{ delay: 0.4 }}
-          className="mt-5 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed"
+          className="mt-5 max-w-2xl text-base sm:text-lg text-[#5A504B] leading-relaxed font-normal"
         >
           {description}
         </motion.p>
