@@ -15,7 +15,7 @@ import {
   useTransform,
   type MotionValue,
   type UseScrollOptions,
-} from "framer-motion";
+} from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -69,7 +69,7 @@ const StackingCardItem = ({
     progress,
     scaleMultiplier,
     totalCards = 0,
-  } = useStackingCardsContext();
+  } = useStackingCardsContext(); // Get from Context
   const scaleTo = 1 - (totalCards - index) * (scaleMultiplier ?? 0.03);
   const rangeScale = [index * (1 / totalCards), 1];
   const scale = useTransform(progress, rangeScale, [1, scaleTo]);
