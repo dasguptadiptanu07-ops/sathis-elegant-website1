@@ -4,6 +4,7 @@ import { AnimatedMarqueeHero } from "@/components/AnimatedMarqueeHero";
 import { AboutSection } from "@/components/AboutSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { StackingCardsSection } from "@/components/StackingCardsSection";
 
 export default function Home() {
   const images = [
@@ -32,9 +33,11 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <TestimonialsSection />
+      <StackingCardsSection />
     </main>
   );
 }
+
 
 
 
